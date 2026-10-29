@@ -1,389 +1,525 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy · Kebijakan Privasi — Averflow</title>
-<style>
-  :root{
-    --bg:#fbf6ef;          /* warm cream */
-    --bg-2:#f6efe2;        /* warm sand */
-    --paper:#fffdf9;       /* card */
-    --ink:#3a2e26;         /* deep brown */
-    --ink-soft:#6b5a4d;    /* muted brown */
-    --brand:#c86b3e;       /* terracotta */
-    --brand-2:#e39a5c;     /* warm orange */
-    --leaf:#7a9e6a;        /* sage */
-    --line:#eedfc9;
-    --en:#8a5a3b;
-    --id:#4f7a6e;
-    --shadow:0 6px 24px rgba(120,80,45,.10);
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:
-      radial-gradient(1200px 600px at 85% -10%, #f7e6d3 0%, rgba(247,230,211,0) 60%),
-      radial-gradient(900px 500px at -10% 20%, #f3e2ce 0%, rgba(243,226,206,0) 55%),
-      var(--bg);
-    color:var(--ink);
-    font-family:"Georgia","Iowan Old Style","Times New Roman",serif;
-    line-height:1.75;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:860px;margin:0 auto;padding:0 22px 90px;}
-
-  /* ── hero ── */
-  header.hero{
-    text-align:center;
-    padding:70px 22px 40px;
-    background:
-      linear-gradient(180deg, rgba(251,246,239,0) 0%, var(--bg) 88%),
-      radial-gradient(700px 380px at 50% -20%, #f4dcc4 0%, rgba(244,220,196,0) 70%);
-  }
-  .leaf{font-size:30px;letter-spacing:14px;opacity:.75;}
-  .hero h1{
-    font-size:clamp(34px,6.5vw,56px);
-    line-height:1.15;
-    margin:.25em 0 .15em;
-    font-weight:700;
-    letter-spacing:-.5px;
-    color:var(--ink);
-  }
-  .hero h1 em{
-    font-style:italic;
-    background:linear-gradient(92deg,var(--brand),var(--brand-2));
-    -webkit-background-clip:text;background-clip:text;color:transparent;
-  }
-  .hero .sub{
-    font-size:clamp(15px,2.4vw,19px);
-    color:var(--ink-soft);
-    margin:6px 0;
-  }
-  .hero .badge{
-    display:inline-block;margin-top:14px;
-    font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
-    color:var(--brand);border:1px solid var(--line);
-    background:var(--paper);border-radius:999px;padding:6px 16px;
-    font-family:system-ui,sans-serif;
-  }
-  .mail-hero{
-    margin-top:22px;font-size:15px;color:var(--ink-soft);
-    font-family:system-ui,sans-serif;
-  }
-  .mail-hero a{color:var(--brand);text-decoration:none;font-weight:600;border-bottom:1px dashed var(--brand-2);}
-
-  /* ── toc ── */
-  nav.toc{
-    background:var(--paper);border:1px solid var(--line);border-radius:18px;
-    padding:22px 26px;box-shadow:var(--shadow);margin:10px 0 34px;
-    font-family:system-ui,sans-serif;
-  }
-  nav.toc h2{margin:0 0 12px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:var(--brand);}
-  nav.toc ol{margin:0;padding-left:0;list-style:none;columns:2;column-gap:28px;}
-  nav.toc li{margin:5px 0;break-inside:avoid;}
-  nav.toc a{color:var(--ink-soft);text-decoration:none;font-size:14.5px;}
-  nav.toc a:hover{color:var(--brand);}
-  nav.toc a b{color:var(--brand);font-weight:600;}
-
-  /* ── sections ── */
-  section{
-    background:var(--paper);border:1px solid var(--line);border-radius:20px;
-    padding:34px 36px 30px;margin:22px 0;box-shadow:var(--shadow);
-    position:relative;
-  }
-  section::before{
-    content:"";position:absolute;left:0;top:42px;bottom:42px;width:4px;border-radius:0 4px 4px 0;
-    background:linear-gradient(180deg,var(--brand),var(--brand-2));opacity:.85;
-  }
-  h2.sec{
-    margin:0 0 22px;font-size:24px;line-height:1.35;color:var(--ink);
-    display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;
-  }
-  h2.sec .num{
-    font-family:system-ui,sans-serif;font-size:12px;font-weight:700;color:#fff;
-    background:linear-gradient(135deg,var(--brand),var(--brand-2));
-    width:30px;height:30px;border-radius:50%;display:inline-flex;
-    align-items:center;justify-content:center;flex:0 0 auto;
-    box-shadow:0 3px 10px rgba(200,107,62,.3);
-  }
-
-  /* ── paired lines ── */
-  .pair{margin:0 0 16px;padding:0 0 16px;border-bottom:1px dashed var(--line);}
-  .pair:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-  .en{
-    color:var(--en);font-size:17px;margin:0 0 6px;
-  }
-  .id{
-    color:var(--id);font-size:16.5px;margin:0;
-    padding-left:14px;border-left:2px solid rgba(79,122,110,.35);
-  }
-  .pair .en strong,.pair .id strong{font-weight:700;}
-  .pair .en strong{color:#6f4729;}
-  .pair .id strong{color:#3d695d;}
-
-  .notice{
-    background:linear-gradient(135deg,#fdf3e7,#fbeede);
-    border:1px solid var(--line);border-left:4px solid var(--brand-2);
-    border-radius:14px;padding:18px 22px;margin:0 0 20px;
-    font-size:15.5px;color:#7a5636;
-  }
-
-  /* ── table ── */
-  table{width:100%;border-collapse:collapse;font-family:system-ui,sans-serif;font-size:14.5px;}
-  caption{
-    caption-side:top;text-align:left;font-size:13px;letter-spacing:1.5px;
-    text-transform:uppercase;color:var(--brand);padding-bottom:10px;
-  }
-  th,td{border-bottom:1px solid var(--line);padding:11px 10px;text-align:left;vertical-align:top;}
-  thead th{color:var(--brand);font-size:12.5px;letter-spacing:1px;text-transform:uppercase;background:#faf2e6;}
-  td.en-cell{color:var(--en);width:42%;}
-  td.id-cell{color:var(--id);width:42%;}
-  td.why{color:var(--ink-soft);width:16%;white-space:nowrap;}
-
-  /* ── footer ── */
-  footer{
-    text-align:center;margin-top:40px;padding:34px 24px;
-    background:linear-gradient(135deg,#4a5c4a,#3d5243);
-    color:#f1e9dc;border-radius:22px;
-  }
-  footer .quote{font-size:19px;font-style:italic;opacity:.95;}
-  footer .mail{margin-top:16px;font-family:system-ui,sans-serif;font-size:15px;}
-  footer .mail a{color:#ffd9b8;text-decoration:none;border-bottom:1px dashed rgba(255,217,184,.6);}
-  footer .small{margin-top:14px;font-size:13px;opacity:.72;font-family:system-ui,sans-serif;}
-
-  .pill{
-    display:inline-block;font-family:system-ui,sans-serif;font-size:12px;
-    padding:2px 10px;border-radius:999px;margin:0 4px 4px 0;
-    background:#f7ebd9;color:var(--brand);border:1px solid var(--line);
-  }
-  @media (max-width:640px){
-    section{padding:26px 20px 22px;border-radius:16px;}
-    nav.toc ol{columns:1;}
-    .en,.id{font-size:16px;}
-    td.why{white-space:normal;}
-  }
-  @media print{
-    body{background:#fff;}
-    section{box-shadow:none;break-inside:avoid;page-break-inside:avoid;}
-    header.hero{padding-top:20px;}
-    nav.toc{display:none;}
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Averflow</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warmBg: '#FAF6F0',
+                        warmCard: '#FFFFFF',
+                        warmBorder: '#F0E6D8',
+                        terracotta: {
+                            50: '#FDF7F5',
+                            100: '#FBF0EB',
+                            500: '#D96B43',
+                            600: '#C2552D',
+                            700: '#A3411F',
+                        },
+                        warmText: {
+                            main: '#2C2724',
+                            muted: '#6E6760',
+                            light: '#8F867E'
+                        },
+                        sage: {
+                            100: '#EAF1EA',
+                            600: '#4A7C59',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            background-color: #FAF6F0;
+            color: #2C2724;
+        }
+        .gradient-header {
+            background: linear-gradient(135deg, #FFF9F5 0%, #FAF6F0 100%);
+        }
+        .custom-shadow {
+            box-shadow: 0 10px 30px -5px rgba(217, 107, 67, 0.05), 0 4px 15px -2px rgba(44, 39, 36, 0.03);
+        }
+        /* Hide non-selected language smoothly */
+        .lang-content {
+            transition: opacity 0.25s ease-in-out;
+        }
+        .lang-hidden {
+            display: none;
+            opacity: 0;
+        }
+    </style>
 </head>
-<body>
+<body class="min-h-screen flex flex-col font-sans antialiased text-warmText-main leading-relaxed">
 
-<header class="hero">
-  <div class="leaf">❦ ❧ ❦</div>
-  <h1>Privacy Policy for <em>Averflow</em></h1>
-  <p class="sub">We keep your data close, and your trust closer.</p>
-  <p class="sub"><em>Kebijakan Privasi untuk Averflow</em> — Kami menjaga data Anda dengan hati-hati, dan kepercayaan Anda lebih dari itu.</p>
-  <div class="badge">Last updated · Diperbarui: 28 October 2026</div>
-  <div class="mail-hero">
-    Questions? · Ada pertanyaan? &nbsp;✉ <a href="mailto:SadirErsayin23412@gmail.com">SadirErsayin23412@gmail.com</a>
-  </div>
-</header>
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-warmBg/90 border-b border-warmBorder/60 transition-all duration-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+            <!-- App Branding -->
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-terracotta-500 to-terracotta-600 flex items-center justify-center text-white shadow-md shadow-terracotta-500/20">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight text-warmText-main">Averflow</span>
+                    <span class="text-xs block text-warmText-muted font-medium" id="header-subtitle">Privacy First Policy</span>
+                </div>
+            </div>
 
-<div class="wrap">
+            <!-- Language Switcher Controls -->
+            <div class="bg-warmBorder/50 p-1 rounded-2xl flex items-center space-x-1 border border-warmBorder">
+                <button id="btn-en" onclick="setLanguage('en')" class="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center space-x-1.5 shadow-sm bg-white text-terracotta-600">
+                    <span>🇺🇸</span>
+                    <span>English</span>
+                </button>
+                <button id="btn-id" onclick="setLanguage('id')" class="px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center space-x-1.5 text-warmText-muted hover:text-warmText-main">
+                    <span>🇮🇩</span>
+                    <span>Bahasa Indonesia</span>
+                </button>
+            </div>
+        </div>
+    </header>
 
-<nav class="toc">
-  <h2>Table of Contents · Daftar Isi</h2>
-  <ol>
-    <li><a href="#s1"><b>01</b> Who we are · Siapa kami</a></li>
-    <li><a href="#s2"><b>02</b> Data we collect · Data kami kumpulkan</a></li>
-    <li><a href="#s3"><b>03</b> How we use it · Cara kami menggunakannya</a></li>
-    <li><a href="#s4"><b>04</b> Sharing · Berbagi data</a></li>
-    <li><a href="#s5"><b>05</b> International transfers · Transfer internasional</a></li>
-    <li><a href="#s6"><b>06</b> Cookies &amp; SDKs · Cookie &amp; SDK</a></li>
-    <li><a href="#s7"><b>07</b> Retention · Penyimpanan</a></li>
-    <li><a href="#s8"><b>08</b> Security · Keamanan</a></li>
-    <li><a href="#s9"><b>09</b> Your rights · Hak Anda</a></li>
-    <li><a href="#s10"><b>10</b> Children · Anak-anak</a></li>
-    <li><a href="#s11"><b>11</b> Third-party links · Tautan pihak ketiga</a></li>
-    <li><a href="#s12"><b>12</b> Changes · Perubahan</a></li>
-    <li><a href="#s13"><b>13</b> Contact us · Hubungi kami</a></li>
-    <li><a href="#s14"><b>14</b> Consent form · Formulir persetujuan</a></li>
-  </ol>
-</nav>
+    <!-- Main Content Container -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 w-full">
 
-<!-- ═══════════ 01 ═══════════ -->
-<section id="s1">
-  <h2 class="sec"><span class="num">01</span>Who we are · Siapa kami</h2>
-  <p class="pair"><span class="en"><strong>Averflow</strong> is the name of this mobile application. This Privacy Policy explains, in plain language, what personal information we collect when you use Averflow, why we collect it, and the choices you have.</span><span class="id"><strong>Averflow</strong> adalah nama aplikasi seluler ini. Kebijakan Privasi ini menjelaskan, dengan bahasa yang sederhana, informasi pribadi apa yang kami kumpulkan saat Anda menggunakan Averflow, mengapa kami mengumpulkannya, dan pilihan apa yang Anda miliki.</span></p>
-  <p class="pair"><span class="en">The policy applies to all users of Averflow worldwide, and it is written in English (US) and Bahasa Indonesia so that you can read it in the language you are most comfortable with.</span><span class="id">Kebijakan ini berlaku untuk semua pengguna Averflow di seluruh dunia, dan ditulis dalam Bahasa Inggris (Amerika) dan Bahasa Indonesia agar Anda dapat membacanya dalam bahasa yang paling Anda kuasai.</span></p>
-  <p class="pair"><span class="en">In this document, "we", "us", and "our" refer to the developer and operator of Averflow; "you" and "your" refer to you, the user of Averflow.</span><span class="id">Dalam dokumen ini, "kami" merujuk pada pengembang dan pengoperasi Averflow; "Anda" merujuk pada Anda, pengguna Averflow.</span></p>
-  <p class="pair"><span class="en">Please take a few minutes to read this policy carefully. By installing, accessing, or using Averflow, you acknowledge that you have read and understood this policy.</span><span class="id">Mohon luangkan waktu beberapa menit untuk membaca kebijakan ini dengan saksama. Dengan menginstal, mengakses, atau menggunakan Averflow, Anda mengakui telah membaca dan memahami kebijakan ini.</span></p>
-</section>
+        <!-- Welcome / Core Trust Badge Banner -->
+        <div class="gradient-header rounded-3xl p-6 sm:p-8 border border-warmBorder mb-8 custom-shadow relative overflow-hidden">
+            <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-terracotta-500/5 rounded-full blur-2xl pointer-events-none"></div>
+            
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-terracotta-50 text-terracotta-600 text-xs font-semibold mb-3 border border-terracotta-100">
+                        <i data-lucide="lock" class="w-3.5 h-3.5"></i>
+                        <span id="badge-text">Privacy Policy</span>
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl font-bold text-warmText-main tracking-tight">
+                        <span class="lang-en">Privacy Policy for Averflow</span>
+                        <span class="lang-id lang-hidden">Kebijakan Privasi Averflow</span>
+                    </h1>
+                    <p class="text-sm text-warmText-muted mt-1 flex items-center gap-1.5">
+                        <i data-lucide="calendar" class="w-4 h-4 text-terracotta-500"></i>
+                        <span class="lang-en">Last updated: <strong>October 2026</strong></span>
+                        <span class="lang-id lang-hidden">Terakhir diperbarui: <strong>Oktober 2026</strong></span>
+                    </p>
+                </div>
 
-<!-- ═══════════ 02 ═══════════ -->
-<section id="s2">
-  <h2 class="sec"><span class="num">02</span>Data we collect · Data kami kumpulkan</h2>
-  <p class="notice">We only collect data that is necessary for Averflow to work properly and to keep your account safe. You can always ask us what we hold about you by emailing the address at the bottom of this page.<br><em>Kami hanya mengumpulkan data yang diperlukan agar Averflow berfungsi dengan baik dan menjaga keamanan akun Anda. Anda selalu dapat bertanya kepada kami data apa yang kami simpan tentang Anda dengan mengirim email ke alamat di bagian bawah halaman ini.</em></p>
-  <table>
-    <caption>Information we may collect · Informasi yang mungkin kami kumpulkan</caption>
-    <thead>
-      <tr><th>Category · Kategori</th><th>Examples · Contoh</th><th>Purpose · Tujuan</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="en-cell"><strong>Account information</strong><br><em>Informasi akun</em></td>
-        <td class="en-cell">name, email address, phone number, profile photo, login credentials<br><em>nama, alamat email, nomor telepon, foto profil, kredensial masuk</em></td>
-        <td class="why">to create and secure your account<br><em>membuat &amp; mengamankan akun</em></td>
-      </tr>
-      <tr>
-        <td class="en-cell"><strong>Usage information</strong><br><em>Informasi penggunaan</em></td>
-        <td class="en-cell">features you use, actions you take, time spent, crash logs, performance data<br><em>fitur yang Anda gunakan, tindakan yang Anda lakukan, waktu penggunaan, log kerusakan, data kinerja</em></td>
-        <td class="why">to improve the app<br><em>menyempurnakan aplikasi</em></td>
-      </tr>
-      <tr>
-        <td class="en-cell"><strong>Device information</strong><br><em>Informasi perangkat</em></td>
-        <td class="en-cell">device model, operating system version, language, time zone, unique device identifiers<br><em>model perangkat, versi sistem operasi, bahasa, zona waktu, pengenal perangkat unik</em></td>
-        <td class="why">to deliver the right experience<br><em>menyesuaikan pengalaman</em></td>
-      </tr>
-      <tr>
-        <td class="en-cell"><strong>Content you provide</strong><br><em>Konten yang Anda berikan</em></td>
-        <td class="en-cell">text, photos, audio, preferences, settings, support requests<br><em>teks, foto, audio, preferensi, pengaturan, permintaan bantuan</em></td>
-        <td class="why">to operate the features you choose<br><em>mengoperasikan fitur pilihan Anda</em></td>
-      </tr>
-      <tr>
-        <td class="en-cell"><strong>Location information</strong><br><em>Informasi lokasi</em></td>
-        <td class="en-cell">precise GPS location (only with your permission) or approximate location derived from your IP address<br><em>lokasi GPS yang tepat (hanya dengan izin Anda) atau lokasi perkiraan dari alamat IP Anda</em></td>
-        <td class="why">to provide location-based features<br><em>fitur berbasis lokasi</em></td>
-      </tr>
-      <tr>
-        <td class="en-cell"><strong>Payment information</strong><br><em>Informasi pembayaran</em></td>
-        <td class="en-cell">receipts and subscription status; full payment card numbers are handled by the app store and never stored by us<br><em>kwitansi dan status langganan; nomor kartu pembayaran lengkap ditangani oleh toko aplikasi dan tidak pernah kami simpan</em></td>
-        <td class="why">to manage purchases<br><em>mengelola pembelian</em></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
+                <div class="bg-sage-100/80 border border-sage-600/20 px-4 py-3 rounded-2xl flex items-center space-x-3 text-sage-600 self-stretch sm:self-auto">
+                    <i data-lucide="hard-drive" class="w-6 h-6 flex-shrink-0"></i>
+                    <div class="text-xs">
+                        <p class="font-bold">
+                            <span class="lang-en">Local-First Storage</span>
+                            <span class="lang-id lang-hidden">Penyimpanan Lokal Utama</span>
+                        </p>
+                        <p class="opacity-90">
+                            <span class="lang-en">Your personal data stays on your device</span>
+                            <span class="lang-id lang-hidden">Data pribadi Anda tetap di perangkat Anda</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<!-- ═══════════ 03 ═══════════ -->
-<section id="s3">
-  <h2 class="sec"><span class="num">03</span>How we use your data · Cara kami menggunakan data Anda</h2>
-  <p class="pair"><span class="en">We use your personal information for a small number of clear purposes, and we never sell it to advertisers or data brokers.</span><span class="id">Kami menggunakan informasi pribadi Anda untuk sejumlah kecil tujuan yang jelas, dan kami tidak pernah menjualnya kepada pengiklan atau broker data.</span></p>
-  <p class="pair"><span class="en"><strong>To provide the service:</strong> we use your data to create and maintain your account, deliver the features you ask for, and keep Averflow running reliably.</span><span class="id"><strong>Untuk menyediakan layanan:</strong> kami menggunakan data Anda untuk membuat dan memelihara akun Anda, menyediakan fitur yang Anda minta, dan menjaga Averflow berjalan dengan andal.</span></p>
-  <p class="pair"><span class="en"><strong>To communicate with you:</strong> we send you service messages about your account, important notices about the app, and replies to questions you send us. We do not send marketing emails without your consent.</span><span class="id"><strong>Untuk berkomunikasi dengan Anda:</strong> kami mengirimkan pesan layanan tentang akun Anda, pemberitahuan penting mengenai aplikasi, dan balasan atas pertanyaan Anda. Kami tidak mengirim email pemasaran tanpa persetujuan Anda.</span></p>
-  <p class="pair"><span class="en"><strong>To make Averflow better:</strong> we analyse usage and crash information in aggregate to fix bugs, improve performance, and decide which features to build next.</span><span class="id"><strong>Untuk menyempurnakan Averflow:</strong> kami menganalisis informasi penggunaan dan kerusakan secara agregat untuk memperbaiki bug, meningkatkan kinerja, dan menentukan fitur selanjutnya.</span></p>
-  <p class="pair"><span class="en"><strong>To keep everyone safe:</strong> we may use information to detect and prevent fraud, abuse, security incidents, and other harmful activity, and to enforce our terms of service.</span><span class="id"><strong>Untuk menjaga keamanan semua orang:</strong> kami dapat menggunakan informasi untuk mendeteksi dan mencegah penipuan, penyalahgunaan, insiden keamanan, dan aktivitas berbahaya lainnya, serta menegakkan syarat layanan kami.</span></p>
-  <p class="pair"><span class="en"><strong>To meet legal obligations:</strong> we may process data when we are required to do so by applicable law, regulation, court order, or government request.</span><span class="id"><strong>Untuk memenuhi kewajiban hukum:</strong> kami dapat memproses data ketika diwajibkan oleh hukum, peraturan, perintah pengadilan, atau permintaan pemerintah yang berlaku.</span></p>
-</section>
+        <!-- ENGLISH CONTENT -->
+        <article id="content-en" class="lang-content space-y-6">
+            
+            <!-- 1. Introduction -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">1. Our Commitment to Your Privacy</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    At <strong>Averflow</strong>, we believe that your data belongs entirely to you. We are designed with a <strong>local-first philosophy</strong>, prioritizing your privacy, transparency, and data ownership.
+                </p>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed mt-3">
+                    This Privacy Policy explains how Averflow handles data, clarifying what stays on your personal device and the limited circumstances under which information might be processed when you interact with us.
+                </p>
+            </section>
 
-<!-- ═══════════ 04 ═══════════ -->
-<section id="s4">
-  <h2 class="sec"><span class="num">04</span>Sharing your information · Berbagi informasi Anda</h2>
-  <p class="pair"><span class="en">We do not sell your personal information. We only share it in the limited situations described below, and always with trusted partners who are required to protect it.</span><span class="id">Kami tidak menjual informasi pribadi Anda. Kami hanya membagikannya dalam situasi terbatas sebagaimana diuraikan di bawah ini, dan selalu dengan mitra terpercaya yang diwajibkan untuk melindunginya.</span></p>
-  <p class="pair"><span class="en"><strong>Service providers:</strong> companies that help us operate Averflow, such as cloud hosting, analytics, customer support, and payment processing services. They may only use your data to perform work for us.</span><span class="id"><strong>Penyedia layanan:</strong> perusahaan yang membantu kami mengoperasikan Averflow, seperti layanan hosting cloud, analitik, dukungan pelanggan, dan pemrosesan pembayaran. Mereka hanya boleh menggunakan data Anda untuk melakukan pekerjaan bagi kami.</span></p>
-  <p class="pair"><span class="en"><strong>Legal requirements:</strong> we may disclose information when we believe in good faith that disclosure is necessary to comply with a law, regulation, or valid legal process, or to protect the rights, property, or safety of Averflow, our users, or others.</span><span class="id"><strong>Persyaratan hukum:</strong> kami dapat mengungkapkan informasi apabila kami yakin dengan itikad baik bahwa pengungkapan tersebut diperlukan untuk mematuhi hukum, peraturan, atau proses hukum yang sah, atau untuk melindungi hak, properti, atau keselamatan Averflow, pengguna kami, atau pihak lain.</span></p>
-  <p class="pair"><span class="en"><strong>Business transfers:</strong> if Averflow is involved in a merger, acquisition, financing, reorganization, or sale of assets, your information may be transferred as part of that transaction, with notice provided to you where required.</span><span class="id"><strong>Transfer bisnis:</strong> jika Averflow terlibat dalam penggabungan, akuisisi, pendanaan, reorganisasi, atau penjualan aset, informasi Anda dapat ditransfer sebagai bagian dari transaksi tersebut, dengan pemberitahuan kepada Anda apabila diwajibkan.</span></p>
-  <p class="pair"><span class="en"><strong>With your consent:</strong> we may share information for any other purpose when you have given us your explicit permission to do so.</span><span class="id"><strong>Dengan persetujuan Anda:</strong> kami dapat membagikan informasi untuk tujuan lain apabila Anda telah memberikan izin secara eksplisit kepada kami.</span></p>
-</section>
+            <!-- 2. Data Collection & Local Storage -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="database" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">2. Information We Collect (and Don't Collect)</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="p-4 rounded-2xl bg-warmBg border border-warmBorder/60">
+                        <h3 class="font-semibold text-warmText-main flex items-center gap-2 mb-2">
+                            <i data-lucide="smartphone" class="w-4 h-4 text-terracotta-500"></i>
+                            Your App Data Remains Local
+                        </h3>
+                        <p class="text-xs sm:text-sm text-warmText-muted leading-relaxed">
+                            All user content, preferences, tasks, inputs, and files created inside Averflow are stored locally on your device. We do not transmit, sell, or sync your app data to any external central server owned or operated by Averflow.
+                        </p>
+                    </div>
 
-<!-- ═══════════ 05 ═══════════ -->
-<section id="s5">
-  <h2 class="sec"><span class="num">05</span>International data transfers · Transfer data internasional</h2>
-  <p class="pair"><span class="en">Averflow is operated globally, and your information may be processed and stored on servers located outside the country where you live, including in the United States, where some of our service providers are based.</span><span class="id">Averflow dioperasikan secara global, dan informasi Anda dapat diproses serta disimpan di server yang berlokasi di luar negara tempat Anda tinggal, termasuk di Amerika Serikat, tempat sebagian penyedia layanan kami berada.</span></p>
-  <p class="pair"><span class="en">Whenever your data crosses borders, we take steps to make sure it remains protected, such as using contracts with standard data protection clauses and requiring our partners to apply safeguards that are at least equivalent to those in your home country.</span><span class="id">Setiap kali data Anda melintasi batas negara, kami mengambil langkah untuk memastikan data tersebut tetap terlindungi, seperti menggunakan kontrak dengan klausul perlindungan data standar dan mewajibkan mitra kami menerapkan perlindungan yang setidaknya setara dengan yang berlaku di negara Anda.</span></p>
-  <p class="pair"><span class="en">If you are in Indonesia, this means your personal data may be transferred outside Indonesia only when we have ensured that the receiving party provides a level of protection at least equivalent to that required under Indonesian law.</span><span class="id">Apabila Anda berada di Indonesia, hal ini berarti data pribadi Anda hanya dapat ditransfer ke luar Indonesia apabila kami telah memastikan bahwa pihak penerima memberikan tingkat perlindungan yang setidaknya setara dengan yang disyaratkan oleh hukum Indonesia.</span></p>
-</section>
+                    <div class="p-4 rounded-2xl bg-warmBg border border-warmBorder/60">
+                        <h3 class="font-semibold text-warmText-main flex items-center gap-2 mb-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-terracotta-500"></i>
+                            Direct Communications
+                        </h3>
+                        <p class="text-xs sm:text-sm text-warmText-muted leading-relaxed">
+                            If you contact us directly via email (<a href="mailto:targa28nick@gmail.com" class="text-terracotta-600 underline hover:text-terracotta-700 font-medium">targa28nick@gmail.com</a>) for support or feedback, we will receive your email address, your name (if provided), and the contents of your message.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-<!-- ═══════════ 06 ═══════════ -->
-<section id="s6">
-  <h2 class="sec"><span class="num">06</span>Cookies and third-party SDKs · Cookie dan SDK pihak ketiga</h2>
-  <p class="pair"><span class="en">Averflow may use a small number of cookies, local storage, and third-party software development kits (SDKs) to make the app work, to understand how it is used, and to keep it secure.</span><span class="id">Averflow dapat menggunakan sejumlah kecil cookie, penyimpanan lokal, dan kit pengembangan perangkat lunak (SDK) pihak ketiga agar aplikasi berfungsi, untuk memahami cara penggunaannya, dan menjaganya tetap aman.</span></p>
-  <p class="pair"><span class="en">Examples of SDKs we may use include analytics providers (to count how features are used) and crash-reporting tools (to help us find and fix problems). These partners may receive limited technical information such as your device type, operating system, and a randomised identifier.</span><span class="id">Contoh SDK yang mungkin kami gunakan meliputi penyedia analitik (untuk menghitung penggunaan fitur) dan alat pelaporan kerusakan (untuk membantu kami menemukan dan memperbaiki masalah). Mitra ini dapat menerima informasi teknis terbatas seperti jenis perangkat Anda, sistem operasi, dan pengenal acak.</span></p>
-  <p class="pair"><span class="en">You can control many tracking technologies through your device settings, including by limiting ad tracking and resetting advertising identifiers. Some essential technologies cannot be disabled without affecting the basic operation of Averflow.</span><span class="id">Anda dapat mengontrol banyak teknologi pelacakan melalui pengaturan perangkat Anda, termasuk dengan membatasi pelacakan iklan dan menyetel ulang pengenal iklan. Beberapa teknologi penting tidak dapat dinonaktifkan tanpa memengaruhi operasi dasar Averflow.</span></p>
-  <p class="pair"><span class="en">For a current list of the third-party SDKs used by Averflow and their privacy policies, please contact us at the email address shown at the end of this document.</span><span class="id">Untuk daftar terkini SDK pihak ketiga yang digunakan Averflow beserta kebijakan privasi mereka, silakan hubungi kami melalui alamat email yang tercantum di akhir dokumen ini.</span></p>
-</section>
+            <!-- 3. How We Use Information -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="cpu" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">3. How We Use Information</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed mb-4">
+                    Since Averflow operates primarily on your device, our access to your data is extremely minimal. Any information received via direct feedback or support inquiry is used strictly to:
+                </p>
+                <ul class="space-y-2 text-sm text-warmText-muted pl-2">
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-terracotta-500 flex-shrink-0 mt-0.5"></i>
+                        <span>Respond to your support queries, bug reports, or feature requests.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-terracotta-500 flex-shrink-0 mt-0.5"></i>
+                        <span>Improve app performance, design, and user experience for future updates.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-terracotta-500 flex-shrink-0 mt-0.5"></i>
+                        <span>Maintain security and prevent fraudulent activities or support abuse.</span>
+                    </li>
+                </ul>
+            </section>
 
-<!-- ═══════════ 07 ═══════════ -->
-<section id="s7">
-  <h2 class="sec"><span class="num">07</span>Data retention · Penyimpanan data</h2>
-  <p class="pair"><span class="en">We keep your personal information only for as long as we need it for the purposes described in this policy, including to provide Averflow to you and to meet our legal and contractual obligations.</span><span class="id">Kami menyimpan informasi pribadi Anda hanya selama diperlukan untuk tujuan yang diuraikan dalam kebijakan ini, termasuk untuk menyediakan Averflow bagi Anda dan memenuhi kewajiban hukum serta kontraktual kami.</span></p>
-  <p class="pair"><span class="en">When you delete your account, we delete or anonymise your personal information within a reasonable period, except for limited information we must retain for legal, security, or accounting reasons.</span><span class="id">Saat Anda menghapus akun Anda, kami akan menghapus atau menganonimkan informasi pribadi Anda dalam waktu yang wajar, kecuali informasi terbatas yang harus kami simpan demi alasan hukum, keamanan, atau akuntansi.</span></p>
-  <p class="pair"><span class="en">Backup copies may remain in our systems for a short additional period while they are naturally rotated out, but these copies are not used for any active purpose.</span><span class="id">Salinan cadangan dapat tetap berada dalam sistem kami untuk waktu tambahan yang singkat selama diputar secara alami, tetapi salinan tersebut tidak digunakan untuk tujuan aktif apa pun.</span></p>
-</section>
+            <!-- 4. Third-Party Services -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="layers" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">4. Third-Party Services</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    Averflow does not integrate invasive third-party ad networks or tracking SDKs that profile your behavior across apps. 
+                </p>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed mt-3">
+                    In the event that operating system framework components (such as Apple App Store or Google Play Store) provide anonymous, aggregated crash reports or telemetry, those reports are governed by the respective platform’s privacy settings configured on your device.
+                </p>
+            </section>
 
-<!-- ═══════════ 08 ═══════════ -->
-<section id="s8">
-  <h2 class="sec"><span class="num">08</span>Security · Keamanan</h2>
-  <p class="pair"><span class="en">We take the security of your personal information seriously. We use technical and organisational measures such as encryption in transit and at rest, secure authentication, access controls, and regular security reviews.</span><span class="id">Kami menangani keamanan informasi pribadi Anda dengan serius. Kami menggunakan langkah teknis dan organisasi seperti enkripsi saat pengiriman dan penyimpanan, autentikasi aman, kontrol akses, dan tinjauan keamanan secara berkala.</span></p>
-  <p class="pair"><span class="en">No method of transmission over the internet or method of electronic storage is completely secure, so we cannot guarantee absolute security. You can help by choosing a strong, unique password and keeping your account credentials confidential.</span><span class="id">Tidak ada metode pengiriman melalui internet atau metode penyimpanan elektronik yang sepenuhnya aman, sehingga kami tidak dapat menjamin keamanan mutlak. Anda dapat membantu dengan memilih kata sandi yang kuat dan unik serta menjaga kerahasiaan kredensial akun Anda.</span></p>
-  <p class="pair"><span class="en">If we become aware of a security incident that affects your personal information, we will notify you and the relevant authorities as required by applicable law.</span><span class="id">Apabila kami mengetahui adanya insiden keamanan yang memengaruhi informasi pribadi Anda, kami akan memberi tahu Anda dan pihak berwenang yang relevan sesuai dengan hukum yang berlaku.</span></p>
-</section>
+            <!-- 5. Data Security & Retention -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="shield" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">5. Data Security & Storage</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    Because your data resides on your device, its security relies on your device's security measures (such as passcode, Face ID, Fingerprint lock, and operating system encryption).
+                </p>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed mt-3">
+                    If you delete or uninstall Averflow from your device, all associated local data created within the app will be permanently deleted from your hardware, unless backed up to your personal system backup (e.g., iCloud, Google Drive, or local device backup).
+                </p>
+            </section>
 
-<!-- ═══════════ 09 ═══════════ -->
-<section id="s9">
-  <h2 class="sec"><span class="num">09</span>Your rights and choices · Hak dan pilihan Anda</h2>
-  <p class="pair"><span class="en">Depending on where you live, you may have rights under the laws of your country. We will respond to all valid requests within the timeframes required by law, and we will not discriminate against you for exercising your rights.</span><span class="id">Bergantung pada tempat tinggal Anda, Anda mungkin memiliki hak berdasarkan hukum negara Anda. Kami akan menanggapi semua permintaan yang sah dalam tenggat waktu yang disyaratkan oleh hukum, dan kami tidak akan mendiskriminasi Anda karena menggunakan hak Anda.</span></p>
-  <p class="pair"><span class="en"><strong>Access and portability:</strong> you can ask us for a copy of the personal information we hold about you, in a common electronic format.</span><span class="id"><strong>Akses dan portabilitas:</strong> Anda dapat meminta salinan informasi pribadi yang kami simpan tentang Anda, dalam format elektronik yang umum.</span></p>
-  <p class="pair"><span class="en"><strong>Correction:</strong> if any information we hold about you is inaccurate or incomplete, you can ask us to correct it, and you can often update it directly in the app.</span><span class="id"><strong>Koreksi:</strong> apabila ada informasi yang kami simpan tentang Anda tidak akurat atau tidak lengkap, Anda dapat meminta kami memperbaikinya, dan seringkali Anda dapat memperbaruinya langsung di aplikasi.</span></p>
-  <p class="pair"><span class="en"><strong>Deletion:</strong> you can ask us to delete your personal information, and you can delete your account at any time from the in-app settings.</span><span class="id"><strong>Penghapusan:</strong> Anda dapat meminta kami menghapus informasi pribadi Anda, dan Anda dapat menghapus akun Anda kapan saja melalui pengaturan dalam aplikasi.</span></p>
-  <p class="pair"><span class="en"><strong>Withdraw consent:</strong> where we process your data based on your consent, you may withdraw that consent at any time, without affecting the lawfulness of processing done before you withdrew it.</span><span class="id"><strong>Menarik persetujuan:</strong> apabila kami memproses data Anda berdasarkan persetujuan Anda, Anda dapat menarik persetujuan tersebut kapan saja, tanpa memengaruhi keabsahan pemrosesan yang dilakukan sebelum penarikan tersebut.</span></p>
-  <p class="pair"><span class="en"><strong>Object and restrict:</strong> in some cases you may object to our processing of your information or ask us to restrict how we use it.</span><span class="id"><strong>Keberatan dan pembatasan:</strong> dalam beberapa kasus Anda dapat keberatan atas pemrosesan informasi Anda oleh kami atau meminta kami membatasi cara kami menggunakannya.</span></p>
-  <p class="pair"><span class="en">To exercise any of these rights, simply email us at <strong>SadirErsayin23412@gmail.com</strong>. We may ask you to verify your identity before fulfilling your request.</span><span class="id">Untuk menggunakan hak-hak tersebut, cukup kirimkan email kepada kami di <strong>SadirErsayin23412@gmail.com</strong>. Kami dapat meminta Anda memverifikasi identitas Anda sebelum memenuhi permintaan Anda.</span></p>
-</section>
+            <!-- 6. Children's Privacy -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="smile" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">6. Children's Privacy</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    Averflow does not knowingly collect or solicit personal information from children under the age of 13 (or 16 in certain jurisdictions). Because our app does not require account registration or collect personal identifiable information, children can use the application safely without sharing personal details.
+                </p>
+            </section>
 
-<!-- ═══════════ 10 ═══════════ -->
-<section id="s10">
-  <h2 class="sec"><span class="num">10</span>Children's privacy · Privasi anak</h2>
-  <p class="pair"><span class="en">Averflow is not intended for children under the age of 13, and we do not knowingly collect personal information from anyone under 13 without verifiable parental consent.</span><span class="id">Averflow tidak ditujukan untuk anak di bawah usia 13 tahun, dan kami tidak dengan sengaja mengumpulkan informasi pribadi dari siapa pun di bawah usia 13 tanpa persetujuan orang tua yang dapat diverifikasi.</span></p>
-  <p class="pair"><span class="en">If you are a parent or legal guardian and you believe your child has provided us with personal information, please contact us immediately and we will delete it as quickly as possible.</span><span class="id">Apabila Anda adalah orang tua atau wali sah dan Anda yakin anak Anda telah memberikan informasi pribadi kepada kami, silakan hubungi kami segera dan kami akan menghapusnya secepat mungkin.</span></p>
-  <p class="pair"><span class="en">For users in Indonesia, anyone under 18 years of age who is unmarried is considered a child under Indonesian data protection law, and the consent of a parent or guardian is required for the processing of that person's personal data.</span><span class="id">Bagi pengguna di Indonesia, setiap orang di bawah usia 18 tahun yang belum menikah dianggap sebagai anak berdasarkan hukum perlindungan data Indonesia, dan diperlukan persetujuan orang tua atau wali untuk pemrosesan data pribadi orang tersebut.</span></p>
-</section>
+            <!-- 7. Your Rights -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="user-check" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">7. Your Rights & Control</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    You have complete control over your data. You can inspect, modify, or delete your content directly inside Averflow at any time. You can also erase all app data at once by simply uninstalling the application or clearing the application storage in your device settings.
+                </p>
+            </section>
 
-<!-- ═══════════ 11 ═══════════ -->
-<section id="s11">
-  <h2 class="sec"><span class="num">11</span>Links to other services · Tautan ke layanan lain</h2>
-  <p class="pair"><span class="en">Averflow may contain links to websites, products, or services operated by third parties. This Privacy Policy does not apply to those third parties, and we are not responsible for their privacy practices.</span><span class="id">Averflow dapat berisi tautan ke situs web, produk, atau layanan yang dioperasikan oleh pihak ketiga. Kebijakan Privasi ini tidak berlaku bagi pihak ketiga tersebut, dan kami tidak bertanggung jawab atas praktik privasi mereka.</span></p>
-  <p class="pair"><span class="en">We encourage you to read the privacy policy of every website or service you visit, especially before providing any personal information.</span><span class="id">Kami mendorong Anda untuk membaca kebijakan privasi dari setiap situs web atau layanan yang Anda kunjungi, terutama sebelum memberikan informasi pribadi apa pun.</span></p>
-</section>
+            <!-- 8. Changes to This Policy -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">8. Changes to This Privacy Policy</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    We may update our Privacy Policy occasionally to reflect changes in our app design or legal obligations. Any updates will be published on this page with a revised "Last updated" date at the top.
+                </p>
+            </section>
 
-<!-- ═══════════ 12 ═══════════ -->
-<section id="s12">
-  <h2 class="sec"><span class="num">12</span>Changes to this policy · Perubahan kebijakan ini</h2>
-  <p class="pair"><span class="en">We may update this Privacy Policy from time to time to reflect changes in the law, our practices, or the features of Averflow. When we make material changes, we will notify you through the app or by email where appropriate.</span><span class="id">Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu untuk mencerminkan perubahan dalam hukum, praktik kami, atau fitur Averflow. Apabila kami melakukan perubahan material, kami akan memberi tahu Anda melalui aplikasi atau email apabila sesuai.</span></p>
-  <p class="pair"><span class="en">The "last updated" date at the top of this page will always show when the policy was most recently revised. We encourage you to review this page periodically.</span><span class="id">Tanggal "diperbarui" di bagian atas halaman ini akan selalu menunjukkan kapan kebijakan terakhir direvisi. Kami mendorong Anda untuk meninjau halaman ini secara berkala.</span></p>
-  <p class="pair"><span class="en">Continued use of Averflow after changes become effective constitutes your acceptance of the updated policy.</span><span class="id">Penggunaan Averflow yang berkelanjutan setelah perubahan berlaku merupakan penerimaan Anda terhadap kebijakan yang diperbarui.</span></p>
-</section>
+        </article>
 
-<!-- ═══════════ 13 ═══════════ -->
-<section id="s13">
-  <h2 class="sec"><span class="num">13</span>Contact us · Hubungi kami</h2>
-  <p class="pair"><span class="en">If you have any questions, comments, or requests regarding this Privacy Policy or your personal information, we would love to hear from you. We read every message and will respond as soon as we can.</span><span class="id">Apabila Anda memiliki pertanyaan, komentar, atau permintaan mengenai Kebijakan Privasi ini atau informasi pribadi Anda, kami akan senang mendengar dari Anda. Kami membaca setiap pesan dan akan merespons secepat mungkin.</span></p>
-  <p class="pair"><span class="en"><strong>Application name · Nama aplikasi:</strong> Averflow</span><span class="id"><strong>Nama aplikasi:</strong> Averflow</span></p>
-  <p class="pair"><span class="en"><strong>Email · Surel:</strong> <a href="mailto:SadirErsayin23412@gmail.com" style="color:#c86b3e;">SadirErsayin23412@gmail.com</a></span><span class="id"><strong>Email:</strong> <a href="mailto:SadirErsayin23412@gmail.com" style="color:#4f7a6e;">SadirErsayin23412@gmail.com</a></span></p>
-  <p class="pair"><span class="en"><strong>Response time · Waktu respons:</strong> we aim to reply within 5 business days.</span><span class="id"><strong>Waktu respons:</strong> kami berupaya membalas dalam waktu 5 hari kerja.</span></p>
-</section>
+        <!-- INDONESIAN CONTENT -->
+        <article id="content-id" class="lang-content lang-hidden space-y-6">
+            
+            <!-- 1. Pendahuluan -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">1. Komitmen Kami terhadap Privasi Anda</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    Di <strong>Averflow</strong>, kami percaya bahwa data Anda sepenuhnya adalah milik Anda. Aplikasi kami dirancang dengan <strong>filosofi mengutamakan penyimpanan lokal (local-first)</strong>, memberikan prioritas penuh pada privasi, transparansi, dan kepemilikan data Anda.
+                </p>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed mt-3">
+                    Kebijakan Privasi ini menjelaskan bagaimana Averflow mengelola data, memperjelas data apa saja yang tetap berada di perangkat pribadi Anda, serta keterbatasan kondisi di mana informasi mungkin diproses saat Anda berinteraksi dengan kami.
+                </p>
+            </section>
 
-<!-- ═══════════ 14 ═══════════ -->
-<section id="s14">
-  <h2 class="sec"><span class="num">14</span>Consent and requests · Persetujuan dan permintaan</h2>
-  <p class="pair"><span class="en">By tapping "I agree" or "Accept" when you first open Averflow, you acknowledge that you have read this Privacy Policy and consent to the collection and use of your information as described above.</span><span class="id">Dengan mengetuk "Saya setuju" atau "Terima" saat pertama kali membuka Averflow, Anda mengakui telah membaca Kebijakan Privasi ini dan menyetujui pengumpulan serta penggunaan informasi Anda sebagaimana diuraikan di atas.</span></p>
-  <p class="pair"><span class="en">You can exercise any of your privacy rights by clicking the button below, which will open your email app with a ready-made request. Just fill in the blanks and send.</span><span class="id">Anda dapat menggunakan hak privasi Anda dengan mengeklik tombol di bawah ini, yang akan membuka aplikasi email Anda dengan permintaan yang telah disiapkan. Cukup isi bagian yang kosong dan kirim.</span></p>
-  <p style="text-align:center;margin:26px 0 6px;">
-    <a href="mailto:SadirErsayin23412@gmail.com?subject=Privacy%20request%20%E2%80%94%20Averflow&body=I%20would%20like%20to%20exercise%20my%20privacy%20rights%20regarding%20the%20Averflow%20application.%0A%0AMy%20request%20is%20(please%20choose%20one)%3A%0A%20%20%5B%20%5D%20Access%20%2F%20copy%20of%20my%20data%0A%20%20%5B%20%5D%20Correct%20my%20data%0A%20%20%5B%20%5D%20Delete%20my%20account%20and%20data%0A%20%20%5B%20%5D%20Withdraw%20my%20consent%0A%20%20%5B%20%5D%20Object%20to%20processing%0A%20%20%5B%20%5D%20Other%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%0AName%20%2F%20Nama%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0AEmail%20%2F%20Surel%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%0AThank%20you.%0ASadirErsayin23412@gmail.com"
-       style="display:inline-block;background:linear-gradient(135deg,#c86b3e,#e39a5c);color:#fff;
-              text-decoration:none;font-family:system-ui,sans-serif;font-size:16px;font-weight:600;
-              padding:14px 30px;border-radius:999px;box-shadow:0 6px 18px rgba(200,107,62,.35);">
-      ✉ Send a privacy request · Kirim permintaan privasi
-    </a>
-  </p>
-  <p style="text-align:center;margin-top:20px;">
-    <span class="pill">GDPR-ready · Siap GDPR</span>
-    <span class="pill">CCPA/CPRA-ready · Siap CCPA/CPRA</span>
-    <span class="pill">Indonesia PDP Law · UU PDP Indonesia</span>
-  </p>
-</section>
+            <!-- 2. Pengumpulan Data & Penyimpanan Lokal -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="database" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">2. Informasi yang Kami Kumpulkan (dan Tidak Kami Kumpulkan)</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="p-4 rounded-2xl bg-warmBg border border-warmBorder/60">
+                        <h3 class="font-semibold text-warmText-main flex items-center gap-2 mb-2">
+                            <i data-lucide="smartphone" class="w-4 h-4 text-terracotta-500"></i>
+                            Data Aplikasi Tetap Tersimpan Lokal
+                        </h3>
+                        <p class="text-xs sm:text-sm text-warmText-muted leading-relaxed">
+                            Semua konten pengguna, pengaturan, tugas, catatan, dan berkas yang dibuat di dalam Averflow disimpan secara lokal di perangkat Anda. Kami tidak mentransfer, menjual, atau menyinkronkan data aplikasi Anda ke server terpusat eksternal mana pun milik Averflow.
+                        </p>
+                    </div>
 
-<footer>
-  <div class="quote">"Your trust is the most valuable thing we hold."<br><em>"Kepercayaan Anda adalah hal paling berharga yang kami simpan."</em></div>
-  <div class="mail">✉ <a href="mailto:SadirErsayin23412@gmail.com">SadirErsayin23412@gmail.com</a></div>
-  <div class="small">© Averflow · Privacy Policy · Kebijakan Privasi — English (US) / Bahasa Indonesia</div>
-</footer>
+                    <div class="p-4 rounded-2xl bg-warmBg border border-warmBorder/60">
+                        <h3 class="font-semibold text-warmText-main flex items-center gap-2 mb-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-terracotta-500"></i>
+                            Komunikasi Langsung
+                        </h3>
+                        <p class="text-xs sm:text-sm text-warmText-muted leading-relaxed">
+                            Jika Anda menghubungi kami secara langsung melalui email (<a href="mailto:targa28nick@gmail.com" class="text-terracotta-600 underline hover:text-terracotta-700 font-medium">targa28nick@gmail.com</a>) untuk bantuan atau umpan balik, kami akan menerima alamat email Anda, nama Anda (jika dicantumkan), serta isi pesan Anda.
+                        </p>
+                    </div>
+                </div>
+            </section>
 
-</div>
+            <!-- 3. Penggunaan Informasi -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="cpu" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">3. Bagaimana Kami Menggunakan Informasi</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed mb-4">
+                    Karena Averflow beroperasi terutama di perangkat Anda, akses kami terhadap data Anda sangatlah terbatas. Informasi apa pun yang diterima melalui dukungan email hanya digunakan untuk:
+                </p>
+                <ul class="space-y-2 text-sm text-warmText-muted pl-2">
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-terracotta-500 flex-shrink-0 mt-0.5"></i>
+                        <span>Menjawab pertanyaan dukungan, laporan kutu (bug), atau permintaan fitur dari Anda.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-terracotta-500 flex-shrink-0 mt-0.5"></i>
+                        <span>Meningkatkan kinerja, desain, dan pengalaman pengguna aplikasi pada pembaruan mendatang.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i data-lucide="check-circle" class="w-4 h-4 text-terracotta-500 flex-shrink-0 mt-0.5"></i>
+                        <span>Menjaga keamanan dan mencegah penyalahgunaan layanan dukungan.</span>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 4. Layanan Pihak Ketiga -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="layers" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">4. Layanan Pihak Ketiga</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    Averflow tidak mengintegrasikan jaringan iklan pihak ketiga yang invasif atau SDK pelacak yang memprofilkan perilaku Anda di berbagai aplikasi.
+                </p>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed mt-3">
+                    Jika komponen sistem operasi (seperti Apple App Store atau Google Play Store) menyediakan laporan kerusakan anonim yang diagregasikan, laporan tersebut diatur oleh pengaturan privasi platform masing-masing yang dikonfigurasi di perangkat Anda.
+                </p>
+            </section>
+
+            <!-- 5. Keamanan Data & Penyimpanan -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="shield" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">5. Keamanan Data & Penyimpanan</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    Karena data Anda berada di perangkat Anda sendiri, keamanannya bergantung pada tindakan keamanan perangkat Anda (seperti sandi, Face ID, sidik jari, dan enkripsi sistem operasi).
+                </p>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed mt-3">
+                    Jika Anda menghapus aplikasi Averflow dari perangkat Anda, seluruh data lokal terkait yang dibuat di dalam aplikasi akan terhapus secara permanen dari perangkat keras Anda, kecuali jika sebelumnya dicadangkan ke sistem pencadangan pribadi Anda (misalnya iCloud, Google Drive, atau cadangan lokal).
+                </p>
+            </section>
+
+            <!-- 6. Privasi Anak-Anak -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="smile" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">6. Privasi Anak-Anak</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    Averflow tidak secara sengaja mengumpulkan atau meminta informasi pribadi dari anak-anak di bawah usia 13 tahun (atau 16 tahun di yurisdiksi tertentu). Karena aplikasi kami tidak memerlukan pendaftaran akun atau mengumpulkan informasi pribadi, anak-anak dapat menggunakan aplikasi ini dengan aman tanpa membagikan rincian pribadi.
+                </p>
+            </section>
+
+            <!-- 7. Hak & Kendali Anda -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="user-check" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">7. Hak & Kendali Anda</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    Anda memiliki kendali penuh atas data Anda. Anda dapat memeriksa, mengubah, atau menghapus konten Anda secara langsung di dalam Averflow kapan saja. Anda juga dapat menghapus seluruh data aplikasi sekaligus dengan menghapus aplikasi atau membersihkan penyimpanan aplikasi di pengaturan perangkat Anda.
+                </p>
+            </section>
+
+            <!-- 8. Perubahan Kebijakan Ini -->
+            <section class="bg-warmCard rounded-3xl p-6 sm:p-8 border border-warmBorder/80 custom-shadow">
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="p-2.5 rounded-2xl bg-terracotta-50 text-terracotta-500">
+                        <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-warmText-main">8. Perubahan pada Kebijakan Privasi Ini</h2>
+                </div>
+                <p class="text-warmText-muted text-sm sm:text-base leading-relaxed">
+                    Kami dapat memperbarui Kebijakan Privasi kami secara berkala untuk mencerminkan perubahan dalam aplikasi atau kewajiban hukum. Setiap pembaruan akan dipublikasikan di halaman ini dengan tanggal "Terakhir diperbarui" yang direvisi di bagian atas.
+                </p>
+            </section>
+
+        </article>
+
+        <!-- Contact Section (Common / Dynamic Text) -->
+        <section class="mt-8 bg-gradient-to-br from-terracotta-500 to-terracotta-600 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-terracotta-500/10 relative overflow-hidden">
+            <div class="absolute right-0 top-0 translate-x-4 -translate-y-4 w-32 h-32 bg-white/10 rounded-full blur-xl pointer-events-none"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div>
+                    <h2 class="text-2xl font-bold tracking-tight mb-2">
+                        <span class="lang-en">Have Questions or Feedback?</span>
+                        <span class="lang-id lang-hidden">Punya Pertanyaan atau Masukan?</span>
+                    </h2>
+                    <p class="text-white/90 text-sm max-w-lg">
+                        <span class="lang-en">If you have any questions, concerns, or requests regarding this Privacy Policy, please reach out to us directly.</span>
+                        <span class="lang-id lang-hidden">Jika Anda memiliki pertanyaan, kendala, atau permintaan mengenai Kebijakan Privasi ini, silakan hubungi kami secara langsung.</span>
+                    </p>
+                </div>
+
+                <a href="mailto:targa28nick@gmail.com" class="inline-flex items-center space-x-2 px-6 py-3.5 bg-white text-terracotta-600 hover:bg-warmBg font-bold text-sm rounded-2xl shadow-md transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 flex-shrink-0">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span>targa28nick@gmail.com</span>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-warmBorder/60 py-8 bg-warmBg text-center text-xs text-warmText-light mt-12">
+        <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 Averflow. All rights reserved.</p>
+            <div class="flex items-center space-x-4">
+                <a href="mailto:targa28nick@gmail.com" class="hover:text-terracotta-600 transition-colors">Contact Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script for Switcher -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Switch Language function
+        function setLanguage(lang) {
+            const btnEn = document.getElementById('btn-en');
+            const btnId = document.getElementById('btn-id');
+            const contentEn = document.getElementById('content-en');
+            const contentId = document.getElementById('content-id');
+            const subtitle = document.getElementById('header-subtitle');
+            const badgeText = document.getElementById('badge-text');
+
+            // Inline element targets with lang classes
+            const inlineEn = document.querySelectorAll('.lang-en');
+            const inlineId = document.querySelectorAll('.lang-id');
+
+            if (lang === 'id') {
+                // Activate ID button
+                btnId.className = "px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center space-x-1.5 shadow-sm bg-white text-terracotta-600";
+                btnEn.className = "px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center space-x-1.5 text-warmText-muted hover:text-warmText-main";
+
+                // Show ID content, hide EN content
+                contentEn.classList.add('lang-hidden');
+                contentId.classList.remove('lang-hidden');
+
+                subtitle.textContent = "Kebijakan Privasi";
+                badgeText.textContent = "Kebijakan Privasi";
+
+                inlineEn.forEach(el => el.classList.add('lang-hidden'));
+                inlineId.forEach(el => el.classList.remove('lang-hidden'));
+
+                document.documentElement.lang = "id";
+            } else {
+                // Activate EN button
+                btnEn.className = "px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center space-x-1.5 shadow-sm bg-white text-terracotta-600";
+                btnId.className = "px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex items-center space-x-1.5 text-warmText-muted hover:text-warmText-main";
+
+                // Show EN content, hide ID content
+                contentId.classList.add('lang-hidden');
+                contentEn.classList.remove('lang-hidden');
+
+                subtitle.textContent = "Privacy First Policy";
+                badgeText.textContent = "Privacy Policy";
+
+                inlineId.forEach(el => el.classList.add('lang-hidden'));
+                inlineEn.forEach(el => el.classList.remove('lang-hidden'));
+
+                document.documentElement.lang = "en";
+            }
+        }
+    </script>
 </body>
 </html>
